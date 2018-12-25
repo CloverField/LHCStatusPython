@@ -18,6 +18,8 @@ def CheckCryo():
             GetSectorStatus("Sector 12")
         elif int(selection) == 2:
             GetSectorStatus("Sector 23")
+        elif int(selection) == 3:
+            GetSectorStatus("Sector 34")
         else:
             pass
 
@@ -42,8 +44,36 @@ def GetSectorStatus(Sector):
             if pixel[0] == 255:
                 print("Looks like Cryo is down in Sector 12.")
                 return
-
-        print("Everything looks good in Sector 12")
+        print("Everything looks good in Sector 12.")
 
     elif Sector == "Sector 23":
-        pass
+        pixels = list()
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        pixels.append(rgb_img.getpixel((100,140)))
+        pixels.append(rgb_img.getpixel((188,140)))
+        pixels.append(rgb_img.getpixel((288,140)))
+        pixels.append(rgb_img.getpixel((378,140)))
+        pixels.append(rgb_img.getpixel((478,140)))
+        pixels.append(rgb_img.getpixel((568,140)))
+
+        for pixel in pixels:
+            if pixel[0] == 255:
+                print("Looks like Cryo is down in Sector 23.")
+                return
+        print("Everything looks good in Sector 23.")
+
+    elif Sector == "Sector 34":
+        pixels = list()
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        pixels.append(rgb_img.getpixel((478,175)))
+        pixels.append(rgb_img.getpixel((568,175)))
+        pixels.append(rgb_img.getpixel((668,175)))
+        pixels.append(rgb_img.getpixel((758,175)))
+
+        for pixel in pixels:
+            if pixel[0] == 255:
+                print("Looks like Cryo is down in Sector 34.")
+                return
+        print("Everything looks good in Sector 34.")
