@@ -1,4 +1,5 @@
 import LHCStatusOptions
+from CheckCryo import CheckCryo
 
 def main():
     print("What do you want to check?")
@@ -21,6 +22,7 @@ def main():
     if selection.isdigit():
         if int(selection) == 1:
             print("Selected Check Cryo")
+            CheckCryo()
         elif int(selection) == 2:
             pass
         else:
