@@ -13,3 +13,5 @@ class StatusOptions(Enum):
     Page1BeamStatus = "Page 1 Beam SMP Status"
     Page1BeamSMPStatus = "Page 1 Individual SMP Beam Status"
     PerformOCROnVistarPage = "Performs OCR on LHC Vistar page"
+
+## Will need to make a new class that contains a value and a string
