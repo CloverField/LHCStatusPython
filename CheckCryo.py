@@ -158,3 +158,24 @@ def GetSectorStatus(Sector):
                 print("Looks like Cryo is down in Sector 78.")
                 return
         print("Everything looks good in Sector 78.")
+
+    elif Sector == "Sector 81":
+        colors = list()
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        colors.append(Color(*rgb_img.getpixel((100,350))))  #CMITR8
+        colors.append(Color(*rgb_img.getpixel((188,350))))  #CSITR8
+        colors.append(Color(*rgb_img.getpixel((288,350))))  #CMMSR8
+        colors.append(Color(*rgb_img.getpixel((378,350))))  #CSMSR8
+        colors.append(Color(*rgb_img.getpixel((478,350))))  #CMAR81
+        colors.append(Color(*rgb_img.getpixel((568,350))))  #CSAR81
+        colors.append(Color(*rgb_img.getpixel((668,350))))  #CMMSL1
+        colors.append(Color(*rgb_img.getpixel((758,350))))  #CSMSL1
+        colors.append(Color(*rgb_img.getpixel((858,350))))  #CMITL1
+        colors.append(Color(*rgb_img.getpixel((948,350))))  #CSITL1
+
+        for color in colors:
+            if color.r == 255:
+                print("Looks like Cryo is down in Sector 81.")
+                return
+        print("Everything looks good in Sector 81.")
