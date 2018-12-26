@@ -1,6 +1,6 @@
 #import LHCStatusOptions
 from CheckCryo import CheckCryo
-from Check60AmpPCPermit import Check60AmpPCPermit
+from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 
 def main():
     print("What do you want to check?")
@@ -28,6 +28,8 @@ def main():
             pass
         elif int(selection) == 3:
             Check60AmpPCPermit()
+        elif int(selection) == 4:
+            Check60AmpPCPermitIndividual()
         else:
             pass
 
