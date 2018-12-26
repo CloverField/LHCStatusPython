@@ -23,10 +23,12 @@ def CheckCryo():
             GetSectorStatus("Sector 34")
         elif int(selection) == 4:
             GetSectorStatus("Sector 45")
-        elif int(selection) == 6:
+        elif int(selection) == 5:
             GetSectorStatus("Sector 56")
-        elif int(selection) == 7:
+        elif int(selection) == 6:
             GetSectorStatus("Sector 67")
+        elif int(selection) == 7:
+            GetSectorStatus("Sector 78")
         elif int(selection) == 8:
             GetSectorStatus("Sector 81")
         else:
@@ -105,3 +107,22 @@ def GetSectorStatus(Sector):
                 print("Looks like Cryo is down in Sector 45.")
                 return
         print("Everything looks good in Sector 45.")
+
+    elif Sector == "Sector 56":
+        colors = list()
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        colors.append(Color(*rgb_img.getpixel((100,245)))) #CMITR5
+        colors.append(Color(*rgb_img.getpixel((188,245)))) #CSITR5
+        colors.append(Color(*rgb_img.getpixel((288,245)))) #CMMSR5
+        colors.append(Color(*rgb_img.getpixel((378,245)))) #CSMSR5
+        colors.append(Color(*rgb_img.getpixel((478,245)))) #CMAR56
+        colors.append(Color(*rgb_img.getpixel((568,245)))) #CSAR56
+        colors.append(Color(*rgb_img.getpixel((668,245)))) #CMMSL6
+        colors.append(Color(*rgb_img.getpixel((758,245)))) #CSMSL6
+
+        for color in colors:
+            if color.r == 255:
+                print("Looks like Cryo is down in Sector 56.")
+                return
+        print("Everything looks good in Sector 56.")
