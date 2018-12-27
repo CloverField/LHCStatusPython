@@ -40,16 +40,19 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((100,100))))  #CMITR1
-        colors.append(Color(*rgb_img.getpixel((188,100))))  #CSITR1
-        colors.append(Color(*rgb_img.getpixel((288,100))))  #CMMSR1
-        colors.append(Color(*rgb_img.getpixel((378,100))))  #CSMSR1
-        colors.append(Color(*rgb_img.getpixel((478,100))))  #CMAR12
-        colors.append(Color(*rgb_img.getpixel((568,100))))  #CSAR12
-        colors.append(Color(*rgb_img.getpixel((668,100))))  #CMMSL2
-        colors.append(Color(*rgb_img.getpixel((758,100))))  #CSMSL2
-        colors.append(Color(*rgb_img.getpixel((858,100))))  #CMITL2
-        colors.append(Color(*rgb_img.getpixel((948,100))))  #CSITL2
+        coords = [
+            (100,100),  #CMITR1
+            (188,100),  #CSITR1
+            (288,100),  #CMMSR1
+            (378,100),  #CSMSR1
+            (478,100),  #CMAR12
+            (568,100),  #CSAR12
+            (668,100),  #CMMSL2
+            (758,100),  #CSMSL2
+            (858,100),  #CMITL2
+            (948,100)   #CSITL2
+        ] 
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -61,12 +64,15 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((100,140))))  #CMITR2
-        colors.append(Color(*rgb_img.getpixel((188,140))))  #CSITR2
-        colors.append(Color(*rgb_img.getpixel((288,140))))  #CMMSR2
-        colors.append(Color(*rgb_img.getpixel((378,140))))  #CSMSR2
-        colors.append(Color(*rgb_img.getpixel((478,140))))  #CMAML3
-        colors.append(Color(*rgb_img.getpixel((568,140))))  #CSAML3
+        coords = [
+            (100,140),  #CMITR2
+            (188,140),  #CSITR2
+            (288,140),  #CMMSR2
+            (378,140),  #CSMSR2
+            (478,140),  #CMAML3
+            (568,140)   #CSAML3
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -78,10 +84,13 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((478,175))))  #CMAML3
-        colors.append(Color(*rgb_img.getpixel((568,175))))  #CSAML3
-        colors.append(Color(*rgb_img.getpixel((668,175))))  #CMMSL1
-        colors.append(Color(*rgb_img.getpixel((758,175))))  #CSMSL1
+        coords = [
+            (478,175),  #CMAML3
+            (568,175),  #CSAML3
+            (668,175),  #CMMSL1
+            (758,175)   #CSMSL1
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -93,14 +102,17 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((288,210))))  #CMMSR4
-        colors.append(Color(*rgb_img.getpixel((378,210))))  #CSMSR4
-        colors.append(Color(*rgb_img.getpixel((478,210))))  #CMAR45
-        colors.append(Color(*rgb_img.getpixel((568,210))))  #CSAR45
-        colors.append(Color(*rgb_img.getpixel((668,210))))  #CMMSL5
-        colors.append(Color(*rgb_img.getpixel((758,210))))  #CSMSL5
-        colors.append(Color(*rgb_img.getpixel((858,210))))  #CMITL6
-        colors.append(Color(*rgb_img.getpixel((948,210))))  #CSITL6
+        coords = [
+            (288,210),  #CMMSR4
+            (378,210),  #CSMSR4
+            (478,210),  #CMAR45
+            (568,210),  #CSAR45
+            (668,210),  #CMMSL5
+            (758,210),  #CSMSL5
+            (858,210),  #CMITL6
+            (948,210)   #CSITL6
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -112,14 +124,17 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((100,245)))) #CMITR5
-        colors.append(Color(*rgb_img.getpixel((188,245)))) #CSITR5
-        colors.append(Color(*rgb_img.getpixel((288,245)))) #CMMSR5
-        colors.append(Color(*rgb_img.getpixel((378,245)))) #CSMSR5
-        colors.append(Color(*rgb_img.getpixel((478,245)))) #CMAR56
-        colors.append(Color(*rgb_img.getpixel((568,245)))) #CSAR56
-        colors.append(Color(*rgb_img.getpixel((668,245)))) #CMMSL6
-        colors.append(Color(*rgb_img.getpixel((758,245)))) #CSMSL6
+        coords = [
+            (100,245),  #CMITR5
+            (188,245),  #CSITR5
+            (288,245),  #CMMSR5
+            (378,245),  #CSMSR5
+            (478,245),  #CMAR56
+            (568,245),  #CSAR56
+            (668,245),  #CMMSL6
+            (758,245)   #CSMSL6
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -131,10 +146,13 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((288,280))))  #CMMSR6
-        colors.append(Color(*rgb_img.getpixel((378,280))))  #CSMSR6
-        colors.append(Color(*rgb_img.getpixel((478,280))))  #CMAML7
-        colors.append(Color(*rgb_img.getpixel((568,280))))  #CSAML7
+        coords = [
+            (288,280),  #CMMSR6
+            (378,280),  #CSMSR6
+            (478,280),  #CMAML7
+            (568,280)   #CSAML7
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -146,12 +164,15 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((478,315))))  #CMAMR7
-        colors.append(Color(*rgb_img.getpixel((568,315))))  #CSAMR7
-        colors.append(Color(*rgb_img.getpixel((668,315))))  #CMMSL8
-        colors.append(Color(*rgb_img.getpixel((758,315))))  #CSMSL8
-        colors.append(Color(*rgb_img.getpixel((858,315))))  #CMITL8
-        colors.append(Color(*rgb_img.getpixel((948,315))))  #CSITL8
+        coords = [
+            (478,315),  #CMAMR7
+            (568,315),  #CSAMR7
+            (668,315),  #CMMSL8
+            (758,315),  #CSMSL8
+            (858,315),  #CMITL8
+            (948,315)   #CSITL8
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
@@ -163,16 +184,19 @@ def GetSectorStatus(Sector):
         colors = list()
         img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
         rgb_img = img.convert('RGB')
-        colors.append(Color(*rgb_img.getpixel((100,350))))  #CMITR8
-        colors.append(Color(*rgb_img.getpixel((188,350))))  #CSITR8
-        colors.append(Color(*rgb_img.getpixel((288,350))))  #CMMSR8
-        colors.append(Color(*rgb_img.getpixel((378,350))))  #CSMSR8
-        colors.append(Color(*rgb_img.getpixel((478,350))))  #CMAR81
-        colors.append(Color(*rgb_img.getpixel((568,350))))  #CSAR81
-        colors.append(Color(*rgb_img.getpixel((668,350))))  #CMMSL1
-        colors.append(Color(*rgb_img.getpixel((758,350))))  #CSMSL1
-        colors.append(Color(*rgb_img.getpixel((858,350))))  #CMITL1
-        colors.append(Color(*rgb_img.getpixel((948,350))))  #CSITL1
+        coords = [
+            (100,350),  #CMITR8
+            (188,350),  #CSITR8
+            (288,350),  #CMMSR8
+            (378,350),  #CSMSR8
+            (478,350),  #CMAR81
+            (568,350),  #CSAR81
+            (668,350),  #CMMSL1
+            (758,350),  #CSMSL1
+            (858,350),  #CMITL1
+            (948,350)   #CSITL1
+        ]
+        colors += [ Color(*rgb_img.getpixel((xy))) for xy in coords ]
 
         for color in colors:
             if color.r == 255:
