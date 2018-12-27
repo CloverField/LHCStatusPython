@@ -4,6 +4,7 @@ from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 from CheckRFStatus import CheckRFStatus
 from CheckBeamDumpStatus import CheckBeamDumpStatus
 from CheckExpMagnetStatus import CheckExpMagnetStatus
+from CheckSMPStatus import CheckSMPStatus
 
 def main():
     print("What do you want to check?")
@@ -43,6 +44,10 @@ def main():
             pass    
         elif int(selection) == 9:
             CheckExpMagnetStatus()    
+        elif int(selection) == 10:
+            pass    
+        elif int(selection) == 11:
+            CheckSMPStatus()    
         else:
             pass
 
