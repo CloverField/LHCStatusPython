@@ -2,6 +2,7 @@
 from CheckCryo import CheckCryo
 from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 from CheckRFStatus import CheckRFStatus
+from CheckBeamDumpStatus import CheckBeamDumpStatus
 
 def main():
     print("What do you want to check?")
@@ -33,6 +34,10 @@ def main():
             Check60AmpPCPermitIndividual()
         elif int(selection) == 5:
             CheckRFStatus()
+        elif int(selection) == 6:
+            pass
+        elif int(selection) == 7:
+            CheckBeamDumpStatus()    
         else:
             pass
 
