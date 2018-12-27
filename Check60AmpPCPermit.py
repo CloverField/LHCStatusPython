@@ -54,4 +54,69 @@ def Check60AmpPCPermitIndividual():
             pass
 
 def GetPCPermitStatusIndividual(Sector):
-    pass
+    if Sector == "Sector 12":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((108,403)))   #S12
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 23":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((203,403)))   #S23
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 34":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((297,403)))   #S34
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 45":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((392,402)))   #S45
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 56":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((498,402)))   #S56
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 67":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((595,402)))   #S67
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 78":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((688,403)))   #S78
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    elif Sector == "Sector 81":
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        C = Color(*rgb_img.getpixel((772,402)))   #S81
+        if C.r == 255:
+            print("The PCPermit is down.")
+            return
+        print("The PCPermit is up.")
+    else:
+        pass
