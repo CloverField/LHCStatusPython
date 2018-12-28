@@ -5,6 +5,7 @@ from CheckRFStatus import CheckRFStatus
 from CheckBeamDumpStatus import CheckBeamDumpStatus
 from CheckExpMagnetStatus import CheckExpMagnetStatus
 from CheckSMPStatus import CheckSMPStatus
+from CheckVistarPage import CheckVistarPage, CheckVistarComments
 
 def main():
     print("What do you want to check?")
@@ -20,7 +21,8 @@ def main():
     print("10. Individual Experiment Magnet Status")
     print("11. Page 1 Beam SMP Status")
     print("12. Page 1 Individual SMP Beam Status")
-    print("13. Performs OCR on LHC Vistar page")
+    print("13. Perform OCR on LHC Vistar page")
+    print("14. Perform OCR on LHC vistar page comments")
 
     selection = input()
 
@@ -48,6 +50,12 @@ def main():
             pass    
         elif int(selection) == 11:
             CheckSMPStatus()    
+        elif int(selection) == 12:
+            pass  
+        elif int(selection) == 13:
+            CheckVistarPage()    
+        elif int(selection) == 14:
+            CheckVistarComments()    
         else:
             pass
 
