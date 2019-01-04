@@ -98,24 +98,89 @@ def CheckRFStatusIndividual():
     selection = input()
 
     if selection.isdigit():
-        if selection == 1:
+        if int(selection) == 1:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM1L4)
-        elif selection == 2:
+        elif int(selection) == 2:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS1L4)
-        elif selection == 3:
+        elif int(selection) == 3:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM2L4)
-        elif selection == 4:
+        elif int(selection) == 4:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS2L4)
-        elif selection == 5:
+        elif int(selection) == 5:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM1R4)
-        elif selection == 6:
+        elif int(selection) == 6:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS1R4)
-        elif selection == 7:
+        elif int(selection) == 7:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM2R4)
-        elif selection == 8:
+        elif int(selection) == 8:
             GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS2R4)
         else:
             pass
 
 def GetRFStatusIndividual(CryoStat):
-    pass
+    if CryoStat == LHCStatusOptions.RFCryo.CM1L4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((100,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+
+    elif CryoStat == LHCStatusOptions.RFCryo.CS1L4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((188,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CM2L4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((290,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CS2L4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((380,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CM1R4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((480,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CS1R4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((570,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CM2R4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((670,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+            
+    elif CryoStat == LHCStatusOptions.RFCryo.CS2R4:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((760,440))).g == 255:
+            print("Everything looks good for {}.".format(CryoStat.name))
+        else:
+            print("Cryo is down for {}.".format(CryoStat.name))
+    
+    else:
+        pass
