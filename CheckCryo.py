@@ -344,7 +344,24 @@ def CheckCryoIndividual():
                     pass
 
         elif int(selection) == 6:
-            GetSectorStatus("Sector 67")
+            print("Which Magnet do you want to check in Sector 67?")
+            for Option in (LHCStatusOptions.Sector67Magnets):
+                i += 1
+                print('{}. {}'.format(i,Option.name))
+
+            selection = input()
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CMAML7)
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CMMSR6)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CSAML7)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CSMSR6)
+                else:
+                    pass
+
         elif int(selection) == 7:
             GetSectorStatus("Sector 78")
         elif int(selection) == 8:
