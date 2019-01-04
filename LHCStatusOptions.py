@@ -25,6 +25,12 @@ class Sectors(Enum):
     Sector78 = "Sector 78"
     Sector81 = "Sector 81"
 
+class RFSectors(Enum):
+    Sector1L4 = "Sector 1L4"
+    Sector1R4 = "Sector 1R4"
+    Sector2L4 = "Sector 2L4"
+    Sector2R4 = "Sector 2R4"
+
 class Sector12Magnets(Enum):
     CMITR1 = auto()
     CSITR1 = auto()
