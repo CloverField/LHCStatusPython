@@ -87,3 +87,35 @@ def GetRFStatus(Sector):
                 print("Looks like Cryo is down in Sector 2R4.")
                 return
         print("Everything looks good in Sector 2R4.")
+
+def CheckRFStatusIndividual():
+    print("Which Cryostat do you want to Check?")
+    i = 0
+    for Option in (LHCStatusOptions.RFCryo):
+        i += 1
+        print('{}. {}'.format(i,Option.name))
+
+    selection = input()
+
+    if selection.isdigit():
+        if selection == 1:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM1L4)
+        elif selection == 2:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS1L4)
+        elif selection == 3:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM2L4)
+        elif selection == 4:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS2L4)
+        elif selection == 5:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM1R4)
+        elif selection == 6:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS1R4)
+        elif selection == 7:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CM2R4)
+        elif selection == 8:
+            GetRFStatusIndividual(LHCStatusOptions.RFCryo.CS2R4)
+        else:
+            pass
+
+def GetRFStatusIndividual(CryoStat):
+    pass
