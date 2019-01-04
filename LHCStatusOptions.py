@@ -85,4 +85,16 @@ class Sector78Magnets(Enum):
     CMITL8 = auto()
     CSITL8 = auto()
 
+class Sector81Magnets(Enum):
+    CMITR8 = auto()
+    CSITR8 = auto()
+    CMMSR8 = auto()
+    CSMSR8 = auto()
+    CMAR81 = auto()
+    CSAR81 = auto()
+    CMMSL1 = auto()
+    CSMSL1 = auto()
+    CMITL1 = auto()
+    CSITL1 = auto()
+
 ## Will need to make a new class that contains a value and a string
