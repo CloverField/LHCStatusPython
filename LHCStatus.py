@@ -1,5 +1,6 @@
 #import LHCStatusOptions
-from CheckCryo import CheckCryo, CheckCryoIndividual
+from CheckCryo import CheckCryo
+from CheckCryoIndividual import CheckCryoIndividual
 from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 from CheckRFStatus import CheckRFStatus
 from CheckBeamDumpStatus import CheckBeamDumpStatus
