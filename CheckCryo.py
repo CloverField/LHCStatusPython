@@ -413,7 +413,10 @@ def GetSectorStatusIndividual(sector):
         pass
     elif sector == LHCStatusOptions.Sector12Magnets.CSMSR1:
         pass
-    elif sector == LHCStatusOptions.Sector23Magnets.CMAML3:
+    else:
+        pass
+    
+    if sector == LHCStatusOptions.Sector23Magnets.CMAML3:
         pass
     elif sector == LHCStatusOptions.Sector23Magnets.CMITR2:
         pass
