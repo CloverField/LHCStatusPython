@@ -1,12 +1,13 @@
 from Web import getImage
 from Color import Color
+import LHCStatusOptions
 
 def CheckRFStatus():
     print("Which Sector do you want to check?")
-    print("1. Sector 1L4")
-    print("2. Sector 1R4")
-    print("3. Sector 2L4")
-    print("4. Sector 1R4")
+    i = 0
+    for Option in (LHCStatusOptions.RFSectors):
+        i += 1
+        print('{}. {}'.format(i,Option.value))
 
     selection = input()
 
@@ -85,4 +86,4 @@ def GetRFStatus(Sector):
             if color.r == 255:
                 print("Looks like Cryo is down in Sector 2R4.")
                 return
-        print("Everything looks good in Sector 2R4.")        
+        print("Everything looks good in Sector 2R4.")
