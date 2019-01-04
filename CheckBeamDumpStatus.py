@@ -1,10 +1,13 @@
 from Web import getImage
 from Color import Color
+import LHCStatusOptions
 
 def CheckBeamDumpStatus():
     print("Which beam dump do you want to check?")
-    print("1. Beam 1")
-    print("2. Beam 2")
+    i = 0
+    for Option in (LHCStatusOptions.Beams):
+        i += 1
+        print('{}. {}'.format(i,Option.value))
 
     selection = input()
 
