@@ -281,9 +281,9 @@ def CheckCryoIndividual():
                 if int(selection) == 1:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CMAMR3)
                 elif int(selection) == 2:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CMMSL4)
-                elif int(selection) == 3:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CSAMR3)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CMMSL4)
                 elif int(selection) == 4:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CSMSL4)
                 else:
