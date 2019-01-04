@@ -325,21 +325,21 @@ def CheckCryoIndividual():
             selection = input()
             if selection.isdigit():
                 if int(selection) == 1:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMAR56)
-                elif int(selection) == 2:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMITR5)
-                elif int(selection) == 3:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMMSL6)
-                elif int(selection) == 4:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMMSR5)
-                elif int(selection) == 5:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSAR56)
-                elif int(selection) == 6:
+                elif int(selection) == 2:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSITR5)
-                elif int(selection) == 7:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSMSL6)
-                elif int(selection) == 8:
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMMSR5)
+                elif int(selection) == 4:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSMSR5)
+                elif int(selection) == 5:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMAR56)
+                elif int(selection) == 6:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSAR56)
+                elif int(selection) == 7:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CMMSL6)
+                elif int(selection) == 8:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector56Magnets.CSMSL6)
                 else:
                     pass
 
