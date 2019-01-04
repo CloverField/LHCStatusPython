@@ -31,6 +31,10 @@ class RFSectors(Enum):
     Sector2L4 = "Sector 2L4"
     Sector2R4 = "Sector 2R4"
 
+class Beams(Enum):
+    Beam1 = "Beam 1"
+    Beam2 = "Beam 2"
+
 class Sector12Magnets(Enum):
     CMITR1 = auto()
     CSITR1 = auto()
