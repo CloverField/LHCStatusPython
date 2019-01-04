@@ -1,5 +1,5 @@
 #import LHCStatusOptions
-from CheckCryo import CheckCryo
+from CheckCryo import CheckCryo, CheckCryoIndividual
 from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 from CheckRFStatus import CheckRFStatus
 from CheckBeamDumpStatus import CheckBeamDumpStatus
@@ -28,10 +28,9 @@ def main():
 
     if selection.isdigit():
         if int(selection) == 1:
-            print("Selected Check Cryo")
             CheckCryo()
         elif int(selection) == 2:
-            pass
+            CheckCryoIndividual()
         elif int(selection) == 3:
             Check60AmpPCPermit()
         elif int(selection) == 4:
