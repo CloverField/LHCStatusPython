@@ -456,21 +456,69 @@ def GetSectorStatusIndividual(sector):
         pass
 
     if sector == LHCStatusOptions.Sector56Magnets.CMITR5:
-        print("Found magnet")
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((100,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CSITR5:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((188,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CMMSR5:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((288,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CSMSR5:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((378,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CMAR56:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((478,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CSAR56:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((568,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CMMSL6:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((668,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     elif sector == LHCStatusOptions.Sector56Magnets.CSMSL6:
-        pass
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc2.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((758,245))).g == 255:
+            print("Everything looks good for {}.".format(sector.name))
+        else:
+            print("Cryo is down for {}.".format(sector.name))
+     
     else:
         pass
 
