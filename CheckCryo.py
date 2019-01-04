@@ -1,5 +1,6 @@
 from Web import getImage
 from Color import Color
+import LHCStatusOptions
 
 def CheckCryo():
     print("Which Sector do you want to check?")
@@ -33,6 +34,105 @@ def CheckCryo():
             GetSectorStatus("Sector 81")
         else:
             pass
+
+def CheckCryoIndividual():
+    i = 0
+    print("Which Sector do you want to check?")
+    for Option in (LHCStatusOptions.Sectors):
+        i += 1
+        print('{}. {}'.format(i,Option.value))
+
+    selection = input()
+    i = 0
+
+    if selection.isdigit():
+        if int(selection) == 1:
+            print("Which Magnet do you want to check in Sector 12?")
+            for Option in (LHCStatusOptions.Sector12Magnets):
+                i += 1
+                print('{}. {}'.format(i,Option.name))
+
+            selection = input()
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMAR12)
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMITL2)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMITR1)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMMSL2)
+                elif int(selection) == 5:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMMSR1)
+                elif int(selection) == 6:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSAR12)
+                elif int(selection) == 7:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITL2)
+                elif int(selection) == 8:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITR1)
+                elif int(selection) == 9:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSMSL2)
+                elif int(selection) == 10:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSMSR1)
+                else:
+                    pass
+
+        elif int(selection) == 2:
+            print("Which Magnet do you want to check in Sector 23?")
+            for Option in (LHCStatusOptions.Sector23Magnets):
+                i += 1
+                print('{}. {}'.format(i,Option.name))
+
+            selection = input()
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMAML3)
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMITR2)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMMSR2)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSAML3)
+                elif int(selection) == 5:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSITR2)
+                elif int(selection) == 6:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSMSR2)
+                else:
+                    pass
+
+        elif int(selection) == 3:
+            print("Which Magnet do you want to check in Sector 34?")
+            for Option in (LHCStatusOptions.Sector34Magnets):
+                i += 1
+                print('{}. {}'.format(i,Option.name))
+
+            selection = input()
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CMAMR3)
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CMMSL4)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CSAMR3)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector34Magnets.CSMSL4)
+                else:
+                    pass
+
+        elif int(selection) == 4:
+            GetSectorStatus("Sector 45")
+        elif int(selection) == 5:
+            GetSectorStatus("Sector 56")
+        elif int(selection) == 6:
+            GetSectorStatus("Sector 67")
+        elif int(selection) == 7:
+            GetSectorStatus("Sector 78")
+        elif int(selection) == 8:
+            GetSectorStatus("Sector 81")
+        else:
+            pass
+
+    pass
 
 def GetSectorStatus(Sector):
 
@@ -203,3 +303,37 @@ def GetSectorStatus(Sector):
                 print("Looks like Cryo is down in Sector 81.")
                 return
         print("Everything looks good in Sector 81.")
+
+def GetSectorStatusIndividual(sector):
+    if sector == LHCStatusOptions.Sector12Magnets.CMAR12:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CMITL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CMMSL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSITL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CMMSR1:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSAR12:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSITL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSITR1:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSMSL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSMSR1:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CMAML3:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CMITR2:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CMMSR2:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CSAML3:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CSITR2:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CSMSR2:
+        pass
