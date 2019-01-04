@@ -256,17 +256,17 @@ def CheckCryoIndividual():
             selection = input()
             if selection.isdigit():
                 if int(selection) == 1:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMAML3)
-                elif int(selection) == 2:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMITR2)
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSITR2)
                 elif int(selection) == 3:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMMSR2)
                 elif int(selection) == 4:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSAML3)
-                elif int(selection) == 5:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSITR2)
-                elif int(selection) == 6:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSMSR2)
+                elif int(selection) == 5:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CMAML3)
+                elif int(selection) == 6:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector23Magnets.CSAML3)
                 else:
                     pass
 
@@ -445,15 +445,15 @@ def GetSectorStatusIndividual(sector):
     else:
         pass
     
-    if sector == LHCStatusOptions.Sector23Magnets.CMAML3:
-        pass
-    elif sector == LHCStatusOptions.Sector23Magnets.CMITR2:
-        pass
-    elif sector == LHCStatusOptions.Sector23Magnets.CMMSR2:
-        pass
-    elif sector == LHCStatusOptions.Sector23Magnets.CSAML3:
+    if sector == LHCStatusOptions.Sector23Magnets.CMITR2:
         pass
     elif sector == LHCStatusOptions.Sector23Magnets.CSITR2:
         pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CMMSR2:
+        pass
     elif sector == LHCStatusOptions.Sector23Magnets.CSMSR2:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CMAML3:
+        pass
+    elif sector == LHCStatusOptions.Sector23Magnets.CSAML3:
         pass
