@@ -1,5 +1,6 @@
 from Web import getImage
 from Color import Color
+import LHCStatusOptions
 
 def Check60AmpPCPermit():
     colors = list()
@@ -22,14 +23,10 @@ def Check60AmpPCPermit():
 
 def Check60AmpPCPermitIndividual():
     print("Which PC Permit do you want to check?")
-    print("1. Sector 12")
-    print("2. Sector 23")
-    print("3. Sector 34")
-    print("4. Sector 45")
-    print("5. Sector 56")
-    print("6. Sector 67")
-    print("7. Sector 78")
-    print("8. Sector 81")
+    i = 0
+    for Option in (LHCStatusOptions.Sectors):
+        i += 1
+        print('{}. {}'.format(i,Option.value))
 
     selection = input()
 
