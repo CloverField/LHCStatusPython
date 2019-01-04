@@ -45,6 +45,24 @@ class Beams(Enum):
     Beam1 = "Beam 1"
     Beam2 = "Beam 2"
 
+class Components(Enum):
+    BeamDumped = auto()
+    Kicker = auto()
+    BETS= auto()
+    IPOC_U_Beam_Dump_Pane = auto() 
+    LASS = auto()
+    RETRIGGER = auto()
+    XPOC = auto()
+    REMOTE_U_Beam_Dump_Pane = auto()
+    ON_U_Beam_Dump_Pane = auto() 
+    REMOTE_U_Injection_Pane = auto()
+    ON_U_Injection_Pane = auto() 
+    TIMING_ON = auto()
+    CONDITIONING = auto()
+    TIMEOUT = auto()
+    IPOC_U_Injection_Pane = auto() 
+    IQC = auto()
+
 class Sector12Magnets(Enum):
     CMITR1 = auto()
     CSITR1 = auto()
