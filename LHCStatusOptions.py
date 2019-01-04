@@ -77,4 +77,12 @@ class Sector67Magnets(Enum):
     CMAML7 = auto()
     CSAML7 = auto()
 
+class Sector78Magnets(Enum):
+    CMAMR7 = auto()
+    CSAMR7 = auto()
+    CMMSL8 = auto()
+    CSMSL8 = auto()
+    CMITL8 = auto()
+    CSITL8 = auto()
+
 ## Will need to make a new class that contains a value and a string
