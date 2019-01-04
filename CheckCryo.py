@@ -352,13 +352,13 @@ def CheckCryoIndividual():
             selection = input()
             if selection.isdigit():
                 if int(selection) == 1:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CMAML7)
-                elif int(selection) == 2:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CMMSR6)
-                elif int(selection) == 3:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CSAML7)
-                elif int(selection) == 4:
+                elif int(selection) == 2:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CSMSR6)
+                elif int(selection) == 3:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CMAML7)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector67Magnets.CSAML7)
                 else:
                     pass
 
