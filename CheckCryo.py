@@ -519,3 +519,18 @@ def GetSectorStatusIndividual(sector):
         pass
     else:
         pass
+
+    if sector == LHCStatusOptions.Sector78Magnets.CMAMR7:
+        print("Found magnet")
+    elif sector == LHCStatusOptions.Sector78Magnets.CSAMR7:
+        pass
+    elif sector == LHCStatusOptions.Sector78Magnets.CMMSL8:
+        pass
+    elif sector == LHCStatusOptions.Sector78Magnets.CSMSL8:
+        pass
+    elif sector == LHCStatusOptions.Sector78Magnets.CMITL8:
+        pass
+    elif sector == LHCStatusOptions.Sector78Magnets.CSITL8:
+        pass
+    else:
+        pass
