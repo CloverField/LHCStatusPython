@@ -225,25 +225,25 @@ def CheckCryoIndividual():
             selection = input()
             if selection.isdigit():
                 if int(selection) == 1:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMAR12)
-                elif int(selection) == 2:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMITL2)
-                elif int(selection) == 3:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMITR1)
-                elif int(selection) == 4:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMMSL2)
-                elif int(selection) == 5:
+                elif int(selection) == 2:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITR1)
+                elif int(selection) == 3:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMMSR1)
+                elif int(selection) == 4:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSMSR1)
+                elif int(selection) == 5:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMAR12)
                 elif int(selection) == 6:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSAR12)
                 elif int(selection) == 7:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITL2)
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMMSL2)
                 elif int(selection) == 8:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITR1)
-                elif int(selection) == 9:
                     GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSMSL2)
+                elif int(selection) == 9:
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CMITL2)
                 elif int(selection) == 10:
-                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSMSR1)
+                    GetSectorStatusIndividual(LHCStatusOptions.Sector12Magnets.CSITL2)
                 else:
                     pass
 
@@ -422,25 +422,25 @@ def CheckCryoIndividual():
     pass
 
 def GetSectorStatusIndividual(sector):
-    if sector == LHCStatusOptions.Sector12Magnets.CMAR12:
-        pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CMITL2:
-        pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CMMSL2:
-        pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CSITL2:
+    if sector == LHCStatusOptions.Sector12Magnets.CMITR1:
+        print("Found Magnet")
+    elif sector == LHCStatusOptions.Sector12Magnets.CSITR1:
         pass
     elif sector == LHCStatusOptions.Sector12Magnets.CMMSR1:
         pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSMSR1:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CMAR12:
+        pass
     elif sector == LHCStatusOptions.Sector12Magnets.CSAR12:
         pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CSITL2:
-        pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CSITR1:
+    elif sector == LHCStatusOptions.Sector12Magnets.CMMSL2:
         pass
     elif sector == LHCStatusOptions.Sector12Magnets.CSMSL2:
         pass
-    elif sector == LHCStatusOptions.Sector12Magnets.CSMSR1:
+    elif sector == LHCStatusOptions.Sector12Magnets.CMITL2:
+        pass
+    elif sector == LHCStatusOptions.Sector12Magnets.CSITL2:
         pass
     else:
         pass
