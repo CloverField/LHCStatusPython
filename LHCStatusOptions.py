@@ -31,6 +31,16 @@ class RFSectors(Enum):
     Sector2L4 = "Sector 2L4"
     Sector2R4 = "Sector 2R4"
 
+class RFCryo(Enum):
+    CM1L4 = auto()
+    CS1L4 = auto()
+    CM2L4 = auto()
+    CS2L4 = auto()
+    CM1R4 = auto()
+    CS1R4 = auto()
+    CM2R4 = auto()
+    CS2R4 = auto()
+
 class Beams(Enum):
     Beam1 = "Beam 1"
     Beam2 = "Beam 2"
