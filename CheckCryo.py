@@ -121,7 +121,7 @@ def CheckCryoIndividual():
 
         elif int(selection) == 4:
             print("Which Magnet do you want to check in Sector 45?")
-            for Option in (LHCStatusOptions.Sector34Magnets):
+            for Option in (LHCStatusOptions.Sector45Magnets):
                 i += 1
                 print('{}. {}'.format(i,Option.name))
 
