@@ -135,4 +135,12 @@ class Sector81Magnets(Enum):
     CMITL1 = auto()
     CSITL1 = auto()
 
+class EXPMagnets(Enum):
+    ALICE_solenoid = auto()
+    ALICE_dipole = auto()
+    ATLAS_solenoid = auto()
+    ATLAS_torid = auto()
+    CMS_solenoid = auto()
+    LHCb_dipole = auto()
+
 ## Will need to make a new class that contains a value and a string
