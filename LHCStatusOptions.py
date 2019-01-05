@@ -143,4 +143,12 @@ class EXPMagnets(Enum):
     CMS_solenoid = auto()
     LHCb_dipole = auto()
 
+class SMPFlags(Enum):
+    Link_Status_of_Beam_Permits = auto()
+    Global_Beam_Permit = auto()
+    Setup_Beam = auto()
+    Beam_Presence = auto()
+    Moveable_Devices_Allowed_In = auto()
+    Stable_Beams = auto()
+
 ## Will need to make a new class that contains a value and a string
