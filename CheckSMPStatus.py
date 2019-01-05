@@ -71,29 +71,66 @@ def GetSMPStatus(Beam):
         print("Beam 2's SMP status is good.")
 
 def CheckSMPIndividual():
-    print("Which SMP Flag do you want to check?")
+    print("Which beam dump do you want to check?")
     i = 0
-    for Option in (LHCStatusOptions.SMPFlags):
+    for Option in (LHCStatusOptions.Beams):
         i += 1
-        print('{}. {}'.format(i,Option.name.replace('_',' ')))
+        print('{}. {}'.format(i,Option.value))
 
     selection = input()
 
     if selection.isdigit():
         if int(selection) == 1:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits)
+            print("Which SMP Flag do you want to check?")
+            i = 0
+            for Option in (LHCStatusOptions.SMPFlags):
+                i += 1
+                print('{}. {}'.format(i,Option.name.replace('_',' ')))
+
+            selection = input()
+
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits)
+                elif int(selection) == 2:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Global_Beam_Permit)
+                elif int(selection) == 3:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Setup_Beam)
+                elif int(selection) == 4:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Beam_Presence)
+                elif int(selection) == 5:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Moveable_Devices_Allowed_In)
+                elif int(selection) == 6:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam1, LHCStatusOptions.SMPFlags.Stable_Beams)
+                else:
+                    pass
         elif int(selection) == 2:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Global_Beam_Permit)
-        elif int(selection) == 3:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Setup_Beam)
-        elif int(selection) == 4:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Beam_Presence)
-        elif int(selection) == 5:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Moveable_Devices_Allowed_In)
-        elif int(selection) == 6:
-            GetSMPStatusIndividual(LHCStatusOptions.SMPFlags.Stable_Beams)
+            print("Which SMP Flag do you want to check?")
+            i = 0
+            for Option in (LHCStatusOptions.SMPFlags):
+                i += 1
+                print('{}. {}'.format(i,Option.name.replace('_',' ')))
+
+            selection = input()
+
+            if selection.isdigit():
+                if int(selection) == 1:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits)
+                elif int(selection) == 2:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Global_Beam_Permit)
+                elif int(selection) == 3:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Setup_Beam)
+                elif int(selection) == 4:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Beam_Presence)
+                elif int(selection) == 5:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Moveable_Devices_Allowed_In)
+                elif int(selection) == 6:
+                    GetSMPStatusIndividual(LHCStatusOptions.Beams.Beam2, LHCStatusOptions.SMPFlags.Stable_Beams)
+                else:
+                    pass
         else:
             pass
 
-def GetSMPStatusIndividual(smpflag):
-    pass
+def GetSMPStatusIndividual(beam, smpflag):
+    if smpflag == LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits:
+        pass
