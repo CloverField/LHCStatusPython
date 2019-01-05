@@ -46,22 +46,22 @@ class Beams(Enum):
     Beam2 = "Beam 2"
 
 class Components(Enum):
-    BeamDumped = auto()
-    Kicker = auto()
-    BETS= auto()
-    IPOC_U_Beam_Dump_Pane = auto() 
-    LASS = auto()
-    RETRIGGER = auto()
-    XPOC = auto()
-    REMOTE_U_Beam_Dump_Pane = auto()
-    ON_U_Beam_Dump_Pane = auto() 
-    REMOTE_U_Injection_Pane = auto()
-    ON_U_Injection_Pane = auto() 
-    TIMING_ON = auto()
-    CONDITIONING = auto()
-    TIMEOUT = auto()
-    IPOC_U_Injection_Pane = auto() 
-    IQC = auto()
+    BeamDumped = "BeamDumped"
+    Kicker = "Kicker"
+    BETS = "BETS"
+    IPOC_U_Beam_Dump_Pane = "IPOC - Beam Dump Pane"
+    LASS = "LASS"
+    RETRIGGER = "RETRIGGER"
+    XPOC = "XPOC"
+    REMOTE_U_Beam_Dump_Pane = "REMOTE - Beam Dump Pane"
+    ON_U_Beam_Dump_Pane = "ON - Beam Dump Pane"
+    REMOTE_U_Injection_Pane = "REMOTE - Injection Pane"
+    ON_U_Injection_Pane = "ON - Injection Pane"
+    TIMING_ON = "TIMING ON"
+    CONDITIONING = "CONDITIONING"
+    TIMEOUT = "TIMEOUT"
+    IPOC_U_Injection_Pane = "IPOC - Injection Pane"
+    IQC = "IQC"
 
 class Sector12Magnets(Enum):
     CMITR1 = auto()
