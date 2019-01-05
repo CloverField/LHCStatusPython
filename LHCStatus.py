@@ -4,7 +4,7 @@ from CheckCryoIndividual import CheckCryoIndividual
 from Check60AmpPCPermit import Check60AmpPCPermit, Check60AmpPCPermitIndividual
 from CheckRFStatus import CheckRFStatus, CheckRFStatusIndividual
 from CheckBeamDumpStatus import CheckBeamDumpStatus, CheckBeamDumpIndividual
-from CheckExpMagnetStatus import CheckExpMagnetStatus
+from CheckExpMagnetStatus import CheckExpMagnetStatus, CheckExpMagnetIndividual
 from CheckSMPStatus import CheckSMPStatus
 from CheckVistarPage import CheckVistarPage, CheckVistarComments
 
@@ -47,7 +47,7 @@ def main():
         elif int(selection) == 9:
             CheckExpMagnetStatus()    
         elif int(selection) == 10:
-            pass    
+            CheckExpMagnetIndividual()    
         elif int(selection) == 11:
             CheckSMPStatus()    
         elif int(selection) == 12:
