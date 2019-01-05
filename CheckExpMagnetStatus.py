@@ -51,4 +51,47 @@ def CheckExpMagnetIndividual():
             pass
 
 def GetExpMagnetStatusIndividual(magnet):
-    pass
+    if magnet == LHCStatusOptions.EXPMagnets.ALICE_solenoid:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,60))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    elif magnet == LHCStatusOptions.EXPMagnets.ALICE_dipole:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,100))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    elif magnet == LHCStatusOptions.EXPMagnets.ATLAS_solenoid:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,142))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    elif magnet == LHCStatusOptions.EXPMagnets.ATLAS_torid:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,180))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    elif magnet == LHCStatusOptions.EXPMagnets.CMS_solenoid:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,220))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    elif magnet == LHCStatusOptions.EXPMagnets.LHCb_dipole:
+        img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+        rgb_img = img.convert('RGB')
+        if Color(*rgb_img.getpixel((365,260))).g == 255:
+            print("{} is functioning correctly.".format(magnet.name.replace('_',' ')))
+        else:
+            print("{} is faulty.".format(magnet.name.replace('_', ' ')))
+    else:
+        pass
