@@ -132,5 +132,95 @@ def CheckSMPIndividual():
             pass
 
 def GetSMPStatusIndividual(beam, smpflag):
-    if smpflag == LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits:
+    if beam == LHCStatusOptions.Beams.Beam1:
+        if smpflag == LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,572))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Global_Beam_Permit:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,600))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Setup_Beam:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,629))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Beam_Presence:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,658))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Moveable_Devices_Allowed_In:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,686))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Stable_Beams:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((872,715))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        else:
+            pass
+    elif beam == LHCStatusOptions.Beams.Beam2:
+        if smpflag == LHCStatusOptions.SMPFlags.Link_Status_of_Beam_Permits:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,572))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Global_Beam_Permit:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,600))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Setup_Beam:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,629))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Beam_Presence:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,658))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Moveable_Devices_Allowed_In:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,686))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        elif smpflag == LHCStatusOptions.SMPFlags.Stable_Beams:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhc1.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((945,715))).g == 255:
+                print("{} flag is true.".format(smpflag.name.replace('_',' ')))
+            else:
+                print("{} flag is false.".format(smpflag.name.replace('_',' ')))
+        else:
+            pass
+    else:
         pass
