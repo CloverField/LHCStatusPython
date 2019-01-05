@@ -295,6 +295,120 @@ def GetBeamDumpStatusIndividual(beam, component):
             pass
 
     elif beam == LHCStatusOptions.Beams.Beam2:
-        pass
+        if component == LHCStatusOptions.Components.BeamDumped:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((593,38))).g == 255:
+                print("{} has not been dumped.".format(beam.value))
+            else:
+                print("{} has been dumped.".format(beam.value))
+        elif component == LHCStatusOptions.Components.Kicker:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((472,60))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.BETS:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((600,60))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.IPOC_U_Beam_Dump_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((723,60))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.LASS:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((476,80))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.RETRIGGER:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((600,82))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.XPOC:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((726,82))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.REMOTE_U_Beam_Dump_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((481,101))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.ON_U_Beam_Dump_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((593,102))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.REMOTE_U_Injection_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((490,168))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.ON_U_Injection_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((594,168))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.TIMING_ON:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((733,168))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.CONDITIONING:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((465,189))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.TIMEOUT:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((686,188))).g == 255:
+                print("The {} has not expired.".format(component.value))
+            else:
+                print("The {} has expired.".format(component.value))
+        elif component == LHCStatusOptions.Components.IPOC_U_Injection_Pane:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((511,210))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        elif component == LHCStatusOptions.Components.IQC:
+            img = getImage("https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png")
+            rgb_img = img.convert('RGB')
+            if Color(*rgb_img.getpixel((690,210))).g == 255:
+                print("The {} is good.".format(component.value))
+            else:
+                print("The {} is faulty.".format(component.value))
+        else:
+            pass
+
     else:
         pass
