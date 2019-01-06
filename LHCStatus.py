@@ -1,3 +1,8 @@
+"""Pulls information from the LHC Vistars website and lets the user know the 
+status of the machine.
+..moduleauthor:: CloverField
+"""
+
 #import LHCStatusOptions
 from CheckCryo import CheckCryo
 from CheckCryoIndividual import CheckCryoIndividual
@@ -9,6 +14,10 @@ from CheckSMPStatus import CheckSMPStatus, CheckSMPIndividual
 from CheckVistarPage import CheckVistarPage, CheckVistarComments
 
 def main():
+    """
+    The main method for the program. Asks the user what part of the machine
+    they want to check.
+    """
     print("What do you want to check?")
     print("1. Cryo Status")
     print("2. Individual Cryo Status")
