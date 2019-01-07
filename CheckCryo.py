@@ -1,8 +1,19 @@
+"""
+.. module:: CheckCryo
+    :platform: MacOS ,Windows, Unix
+    :synopsis: The CheckCryo module. Returns information about the cryo state of each sector. 
+.. moduleauthor:: CloverField
+"""
 from Web import getImage
 from Color import Color
 import LHCStatusOptions
 
 def CheckCryo():
+    """
+    Prompts the user for which sector to check. 
+    Then calls the appropriate :func:`GetSectorStatus` to check the status of the sector 
+    """
+
     print("Which Sector do you want to check?")
     i = 0
     for Option in (LHCStatusOptions.Sectors):
@@ -32,6 +43,12 @@ def CheckCryo():
             pass
 
 def GetSectorStatus(Sector):
+    """
+    This function checks the individual cryostats for the sector.
+    It lets the user know if all the cryostats are good or if one is faulty.
+    :param Sector: the Sector to check.
+    :type Sector: Sector:`LHCStatusOperations.Sectors`
+    """
 
     if Sector == "Sector 12":
         colors = list()
